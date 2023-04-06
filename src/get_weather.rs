@@ -1,7 +1,7 @@
 use reqwest::Error;
 
-#[tokio::main]
-async fn main() -> Result<(), Error> {
+// #[tokio::main]
+pub async fn getWeather() -> Result<(), Error> {
     let url = "http://t.weather.sojson.com/api/weather/city/101270101";
     let body = reqwest::get(url).await?.text().await?;
     let json: serde_json::Value = serde_json::from_str(&body)?;

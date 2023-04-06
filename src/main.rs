@@ -1,5 +1,11 @@
 use ferris_says::say;
 use std::io::{stdout, BufWriter};
+mod input_add;
+use input_add::sayHello;
+use input_add::inputAdd;
+mod get_weather;
+use get_weather::getWeather;
+use reqwest::Error;
 
 fn main() {
     let stdout = stdout();
@@ -9,7 +15,12 @@ fn main() {
     let mut writer = BufWriter::new(stdout.lock());
     say(message.as_bytes(), width, &mut writer).unwrap();
     let files = get_files();
-    walkdir();
+    // walkdir();
+    sayHello();
+    // loop {
+    //     inputAdd();
+    // }
+    // getWeather();
 }
 
 
