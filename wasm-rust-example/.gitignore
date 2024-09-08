@@ -1,0 +1,32 @@
+# Rust编译输出
+/target/
+
+# WebAssembly编译输出
+/pkg/
+
+# Cargo.lock文件（对库项目来说通常不需要版本控制）
+Cargo.lock
+
+# IDE和编辑器文件
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# 操作系统生成的文件
+.DS_Store
+Thumbs.db
+
+# 日志文件
+*.log
+
+# 临时文件
+*.tmp
+*.bak
+*.backup
+
+# wasm-pack生成的文件
+wasm-pack.log
+
+# 如果您使用npm或yarn管理前端依赖，也可以添加：
+/node_modules/

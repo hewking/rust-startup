@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebAssembly Rust 示例</title>
+</head>
+<body>
+    <h1>WebAssembly Rust 示例</h1>
+    <p>打开控制台查看结果</p>
+    <script type="module">
+        import init, { add, greet } from '../pkg/wasm_example.js';
+
+        async function run() {
+            await init();
+
+            const sum = add(5, 3);
+            console.log('5 + 3 =', sum);
+
+            const message = greet('WebAssembly');
+            console.log(message);
+        }
+
+        run();
+    </script>
+</body>
+</html>
